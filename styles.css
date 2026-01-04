@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins','sans-serif';
+    box-sizing: border-box; /*This is done so that the padding and margin is included within the height and width instead of taking extra space*/
+}
+.container{
+    width: 100%;
+    min-height:100vh;
+    background: linear-gradient(135deg, #170C3Bff,#230B51ff, #2E0966ff, #3A087Cff ,#450691ff);
+    padding: 10px;
+}
+.ToDo-App{
+    width: 100%;
+    max-width: 540px;
+    background-color: #f4f1f1;
+    margin: 100px auto 30px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.ToDo-App h2{
+    display: flex;
+    color: #021e4d;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.ToDo-App h2 i{
+    width: 30px;
+    margin-left: 10px;
+    font-size: 30px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background: #d9e0ec;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+#Add-btn:hover{
+    background:#d93f31;
+}
+#input-box::placeholder{
+    color:#4a4949;
+}
+
+#input-box{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+}
+button{
+
+    border: none;
+    outline: none;
+    background: #ff5945;
+    padding: 16px 50px;
+    color:#fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+/*this is for checking whether the task is completed or not*/
+
+
+ul li{
+    list-style:none;
+    position: relative;
+    padding: 12px 48px 12px 40px;
+    cursor:pointer;
+}
+ul li::before{
+    content:"";
+    position:absolute;
+    left:10px;
+    top:50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-image:url("uncheck.svg");
+    background-size: contain;
+
+
+}
+ul li.checked::before{
+    background-image: url("checked.svg");
+}
+.checked{
+    text-decoration: line-through;
+    color:#47bc3a;
+}
+
+ul li span {
+    position:absolute;
+    right: 0;
+    top:50%;
+    transform: translateY(-50%);
+    width:32px;
+    height: 32px;
+    font-size: 20px;
+    color: #ff4d4d;
+    line-height: 32px;
+    text-align:center;
+    border-radius: 5px;
+    cursor:pointer;
+    transition: background 0.2s ease ;
+    
+}
+ul li span:hover{
+    background: #8b8888;
+    color:#d10000;
+}
+
